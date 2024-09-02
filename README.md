@@ -1,5 +1,8 @@
 # Portfolio Website
-This is my personal portfolio website, showcasing my skills, experience, and projects. The website is built using HTML, CSS, and JavaScript, and is hosted on GitHub Pages.
+
+This is my personal portfolio website, showcasing my skills, experience, and projects. The website is built using HTML, CSS, and JavaScript.
+
+<!-- , and is hosted on GitHub Pages.
 
 Table of Contents
 Features
@@ -68,4 +71,4 @@ Contributing
 Contributions are welcome! If you find a bug or want to suggest a new feature, please open an issue or submit a pull request.
 
 License
-This project is licensed under the MIT License. You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, subject to the conditions of the license.
+This project is licensed under the MIT License. You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, subject to the conditions of the license. -->
