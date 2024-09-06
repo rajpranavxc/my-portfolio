@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Portfolio Website</title>
+    <link rel="icon" href="img\img.jpg" type="image/x-icon" />
     <!-- font awesome -->
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
     <!-- main css -->
@@ -90,18 +91,25 @@
       <div class="nav-menu-inner">
         <ul>
           <li>
-            <a href="#home" class="link-item inner-shadow active">home</a>
+            <a href="#home" class="link-item inner-shadow active"
+              >&nbsp;&nbsp;home&nbsp;&nbsp;</a
+            >
           </li>
           <li>
             <a href="#about" class="link-item outer-shadow hover-in-shadow"
-              >about</a
+              >&nbsp;&nbsp;about&nbsp;&nbsp;</a
             >
           </li>
-          <!-- <li>
-            <a href="#services" class="link-item outer-shadow hover-in-shadow"
-              >services</a
+          <li>
+            <a href="#skills" class="link-item outer-shadow hover-in-shadow"
+              >&nbsp;&nbsp;&nbsp;skills&nbsp;&nbsp;&nbsp;</a
             >
-          </li> -->
+          </li>
+          <li>
+            <a href="Resume.pdf" class="link-item outer-shadow hover-in-shadow"
+              >Resume&nbsp;</a
+            >
+          </li>
           <!-- <li>
             <a href="#portfolio" class="link-item outer-shadow hover-in-shadow"
               >portfolio</a
@@ -109,7 +117,7 @@
           </li> -->
           <li>
             <a href="#contact" class="link-item outer-shadow hover-in-shadow"
-              >contact</a
+              >&nbsp;contact&nbsp;</a
             >
           </li>
         </ul>
@@ -180,7 +188,7 @@
           <div class="home-text">
             <p>Welcome!</p>
             <h2>I'm Pranav Raj</h2>
-            <h1>Software Engineer</h1>
+            <h1>Former SWE Intern @Coinbase | Senior Year at IIT Patna</h1>
             <a
               href="#about"
               class="link-item btn-1 outer-shadow hover-in-shadow"
@@ -190,7 +198,7 @@
           <div class="home-img">
             <div class="img-box">
               <img
-                src="img/Winner.png"
+                src="img/profile.jpg"
                 class="outer-shadow"
                 alt="profile-pic"
               />
@@ -206,14 +214,14 @@
       <div class="container">
         <div class="row">
           <div class="section-title">
-            <h2 data-heading="main-info">About Me</h2>
+            <h2 data-heading="main-info">About Me: Profiles and Journey</h2>
           </div>
         </div>
         <div class="row">
           <div class="about-img">
             <div class="img-box inner-shadow">
               <img
-                src="img/Winner.png"
+                src="img/profile_about.jpg"
                 class="outer-shadow"
                 alt="profile-pic"
               />
@@ -221,66 +229,80 @@
 
             <!-- social links start -->
             <div class="social-links">
-              <a href="" class="outer-shadow hover-in-shadow"
+              <a
+                href=""
+                class="outer-shadow hover-in-shadow"
+                title="Visit my LinkedIn profile"
                 ><i class="fab fa-linkedin-in"></i
               ></a>
               <a
                 href="https://github.com/rajpranavxc"
                 class="outer-shadow hover-in-shadow"
+                title="Visit my GitHub profile"
                 ><i class="fab fa-github"></i
               ></a>
               <a
                 href="https://codeforces.com/profile/ThunderXGod"
                 class="outer-shadow hover-in-shadow"
-                ><i
-                  ><div>
+                title="Visit my Codeforces profile"
+                ><i>
+                  <div>
                     <img
                       src="img\codeforces2.png"
                       alt="CF Logo"
                       style="height: 3vh; width: auto"
-                    /></div></i
+                    />
+                  </div> </i
               ></a>
               <a
                 href="https://www.codechef.com/users/thunder_x_god"
                 class="outer-shadow hover-in-shadow"
-                ><i
-                  ><div>
+                title="Visit my CodeChef profile"
+                ><i>
+                  <div>
                     <img
                       src="img\cc.png"
                       alt="CC Logo"
                       style="height: 3vh; width: auto"
-                    /></div></i
+                    />
+                  </div> </i
               ></a>
               <a
                 href="https://leetcode.com/u/ThunderXGod/"
                 class="outer-shadow hover-in-shadow"
-                ><i
-                  ><div>
+                title="Visit my LeetCode profile"
+                ><i>
+                  <div>
                     <img
                       src="img\LC.png"
                       alt="LC Logo"
                       style="height: 3vh; width: auto"
-                    /></div></i
+                    />
+                  </div> </i
               ></a>
               <a
                 href="https://www.geeksforgeeks.org/user/thunder_x_god/"
                 class="outer-shadow hover-in-shadow"
-                ><i
-                  ><div>
+                title="Visit my GeeksforGeeks profile"
+                ><i>
+                  <div>
                     <img
                       src="img\GFG.svg"
                       alt="Gfg Logo"
                       style="height: 3vh; width: auto"
-                    /></div></i
+                    />
+                  </div> </i
               ></a>
               <a
                 href="https://www.hackerrank.com/rajpranavxc"
                 class="outer-shadow hover-in-shadow"
+                title="Visit my HackerRank profile"
                 ><i class="fab fa-hackerrank"></i
               ></a>
               <a
                 href="mailto:rajpranavxc@gmail.com"
                 class="outer-shadow hover-in-shadow"
+                title="Mail me"
                 ><i class="fas fa-envelope"></i
               ></a>
             </div>
@@ -296,12 +318,13 @@
               create scalable, efficient, and user-friendly solutions.
             </p>
             <p>
-              During my internship at Coinbase, I successfully developed and
-              implemented an interactive dependency graph tool that was adopted
-              by multiple teams, significantly enhancing development efficiency.
-              I am proficient in both frontend and backend development and have
-              hands-on experience with cloud-based solutions like Amazon S3,
-              enabling me to build robust and secure applications.
+              During my internship at <span>Coinbase</span>, I successfully
+              developed and implemented an interactive dependency graph tool
+              that was adopted by multiple teams, significantly enhancing
+              development efficiency. I am proficient in both frontend and
+              backend development and have hands-on experience with cloud-based
+              solutions like Amazon S3, enabling me to build robust and secure
+              applications.
             </p>
             <p>
               I am also actively engaged in competitive programming, earning
@@ -346,150 +369,10 @@
             <span class="tab-item active outer-shadow" data-target=".experience"
               >experience</span
             >
-            <span class="tab-item" data-target=".skills">skills</span>
-
             <span class="tab-item" data-target=".education">education</span>
           </div>
         </div>
         <!-- about tabs end -->
-
-        <!-- skills start -->
-        <div class="row">
-          <div class="skills tab-content">
-            <div class="row">
-              <!-- skill item  start -->
-
-              <!-- skill item 1 start -->
-              <div class="skill-item">
-                <p>C++</p>
-                <div>
-                  <img
-                    src="img/c++.svg"
-                    alt="C++ Logo"
-                    style="height: 10vh; width: auto"
-                  />
-                </div>
-                <!-- <div class="progress inner-shadow">
-                  <div class="progress-bar" style="width: calc(80% - 14px)">
-                    <span>80%</span>
-                  </div>
-                </div> -->
-              </div>
-              <!-- skill item 1 end -->
-
-              <!-- skill item 2 start -->
-              <div class="skill-item">
-                <p>Version Control</p>
-                <div>
-                  <img
-                    src="img\version_control.png"
-                    alt="Version Control Image"
-                    style="height: 10vh; width: auto"
-                  />
-                </div>
-
-                <!-- <div class="progress inner-shadow">
-                  <div class="progress-bar" style="width: calc(50% - 14px)">
-                    <span>50%</span>
-                  </div>
-                </div> -->
-              </div>
-              <!-- skill item 2 end -->
-
-              <!-- skill item 3 start -->
-              <div class="skill-item">
-                <p>Competitive Programming</p>
-                <div>
-                  <img
-                    src="img/cp.png"
-                    alt="COmpetitive Programming Image"
-                    style="height: 10vh; width: auto"
-                  />
-                </div>
-                <!-- <div class="progress inner-shadow">
-                  <div class="progress-bar" style="width: calc(50% - 14px)">
-                    <span>50%</span>
-                  </div>
-                </div> -->
-              </div>
-              <!-- skill item 3 end -->
-
-              <!-- skill item 4 start -->
-              <div class="skill-item">
-                <p>Data Structures & Algorithms</p>
-                <div>
-                  <img
-                    src="img/dsa.png"
-                    alt="DSA Image"
-                    style="height: 10vh; width: auto"
-                  />
-                </div>
-                <!-- <div class="progress inner-shadow">
-                  <div class="progress-bar" style="width: calc(80% - 14px)">
-                    <span>80%</span>
-                  </div>
-                </div> -->
-              </div>
-              <!-- skill item 4 end -->
-
-              <!-- skill item 5 start -->
-              <div class="skill-item">
-                <p>C</p>
-                <div>
-                  <img
-                    src="img/c.png"
-                    alt="C Logo"
-                    style="height: 10vh; width: auto"
-                  />
-                </div>
-                <!-- <div class="progress inner-shadow">
-                  <div class="progress-bar" style="width: calc(60% - 14px)">
-                    <span>60%</span>
-                  </div>
-                </div> -->
-              </div>
-              <!-- skill item 5 end -->
-
-              <!-- skill item 6 start -->
-              <div class="skill-item">
-                <p>Go</p>
-                <div>
-                  <img
-                    src="img/go.png"
-                    alt="Go Logo"
-                    style="height: 10vh; width: auto"
-                  />
-                </div>
-                <!-- <div class="progress inner-shadow">
-                  <div class="progress-bar" style="width: calc(99% - 14px)">
-                    <span>99%</span>
-                  </div>
-                </div> -->
-              </div>
-              <!-- skill item 6 end -->
-              <!-- skill item 6 start -->
-              <div class="skill-item">
-                <p>JavaScript</p>
-                <div>
-                  <img
-                    src="img/logo-javascript.svg"
-                    alt="JS Logo"
-                    style="height: 10vh; width: auto"
-                  />
-                </div>
-                <!-- <div class="progress inner-shadow">
-                  <div class="progress-bar" style="width: calc(69% - 14px)">
-                    <span>69%</span>
-                  </div>
-                </div> -->
-              </div>
-              <!-- skill item 6 end -->
-
-              <!-- skill item end -->
-            </div>
-          </div>
-        </div>
-        <!-- skills end -->
 
         <!-- experience start -->
         <div class="row">
@@ -503,12 +386,7 @@
                       <i class="fas fa-briefcase icon"></i>
                       <span>May, 2024 - August, 2024</span>
                       <h3>Software Engineer Intern</h3>
-                      <h4>Coinbase</h4>
-                      <!-- <img
-                        src="img/Coinbase.svg"
-                        alt="Coinbase Logo"
-                        style="height: 5vh; width: auto"
-                      /> -->
+                      <h4>Coinbase, India</h4>
                       <p>
                         ◦ Developed the frontend and backend of an interactive
                         dependency graph tool, clarifying client, policy, and
@@ -609,11 +487,11 @@
     <!-- about section end -->
 
     <!-- service section start -->
-    <section class="service-section section" id="services">
+    <section class="service-section section" id="skills">
       <div class="container">
         <div class="row">
           <div class="section-title">
-            <h2 data-heading="Services">What i do</h2>
+            <h2 data-heading="skills">Skillset overview</h2>
           </div>
         </div>
         <div class="row">
@@ -621,13 +499,134 @@
           <div class="service-item">
             <div class="service-item-inner outer-shadow">
               <div class="icon inner-shadow">
-                <i class="fas fa-mobile-alt"></i>
+                <a
+                  style="pointer-events: none"
+                  class="outer-shadow hover-in-shadow"
+                  ><i>
+                    <div>
+                      <img
+                        src="img\c++.svg"
+                        alt="CF Logo"
+                        style="height: 5vh; width: auto"
+                      />
+                    </div> </i
+                ></a>
               </div>
-              <h3>Responsive design</h3>
-              <p>
+              <h3>C++</h3>
+              <!-- <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod.
-              </p>
+              </p> -->
+            </div>
+          </div>
+          <!-- service item end -->
+
+          <!-- service item start -->
+          <div class="service-item">
+            <div class="service-item-inner outer-shadow">
+              <div class="icon inner-shadow">
+                <a
+                  style="pointer-events: none"
+                  class="outer-shadow hover-in-shadow"
+                  ><i>
+                    <div>
+                      <img
+                        src="img\c.png"
+                        alt="C Logo"
+                        style="height: 5vh; width: auto"
+                      />
+                    </div> </i
+                ></a>
+              </div>
+              <h3>C</h3>
+            </div>
+          </div>
+          <!-- service item end -->
+
+          <!-- service item start -->
+          <div class="service-item">
+            <div class="service-item-inner outer-shadow">
+              <div class="icon inner-shadow">
+                <a
+                  style="pointer-events: none"
+                  class="outer-shadow hover-in-shadow"
+                  ><i>
+                    <div>
+                      <img
+                        src="img\go.png"
+                        alt="Go Logo"
+                        style="height: 2.2vh; width: auto"
+                      />
+                    </div> </i
+                ></a>
+              </div>
+              <h3>Go</h3>
+            </div>
+          </div>
+          <!-- service item end -->
+
+          <!-- service item start -->
+          <div class="service-item">
+            <div class="service-item-inner outer-shadow">
+              <div class="icon inner-shadow">
+                <a
+                  style="pointer-events: none"
+                  class="outer-shadow hover-in-shadow"
+                  ><i>
+                    <div>
+                      <img
+                        src="img\javascript.png"
+                        alt="JavaScript Logo"
+                        style="height: 7vh; width: auto"
+                      />
+                    </div> </i
+                ></a>
+              </div>
+              <h3>JavaScript</h3>
+            </div>
+          </div>
+          <!-- service item end -->
+
+          <!-- service item start -->
+          <div class="service-item">
+            <div class="service-item-inner outer-shadow">
+              <div class="icon inner-shadow">
+                <a
+                  style="pointer-events: none"
+                  class="outer-shadow hover-in-shadow"
+                  ><i>
+                    <div>
+                      <img
+                        src="img\react.jpeg"
+                        alt="React Logo"
+                        style="height: 5vh; width: auto"
+                      />
+                    </div> </i
+                ></a>
+              </div>
+              <h3>React</h3>
+            </div>
+          </div>
+          <!-- service item end -->
+
+          <!-- service item start -->
+          <div class="service-item">
+            <div class="service-item-inner outer-shadow">
+              <div class="icon inner-shadow">
+                <a
+                  style="pointer-events: none"
+                  class="outer-shadow hover-in-shadow"
+                  ><i>
+                    <div>
+                      <img
+                        src="img\dsa.png"
+                        alt="DSA Image"
+                        style="height: 7vh; width: auto"
+                      />
+                    </div> </i
+                ></a>
+              </div>
+              <h3>Data Structures & Algorithms</h3>
             </div>
           </div>
           <!-- service item end -->
@@ -638,11 +637,7 @@
               <div class="icon inner-shadow">
                 <i class="fas fa-laptop-code"></i>
               </div>
-              <h3>Web design</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod.
-              </p>
+              <h3>Competitive Programming</h3>
             </div>
           </div>
           <!-- service item end -->
@@ -650,14 +645,21 @@
           <!-- service item start -->
           <div class="service-item">
             <div class="service-item-inner outer-shadow">
-              <div class="icon inner-shadow">
-                <i class="fas fa-palette"></i>
+              <div class="icon inner-shadow" style="width: 75px; height: 65px">
+                <a
+                  style="pointer-events: none"
+                  class="outer-shadow hover-in-shadow"
+                  ><i>
+                    <div>
+                      <img
+                        src="img\shell.png"
+                        alt="Shell Scripting Image"
+                        style="height: 6vh; width: auto"
+                      />
+                    </div> </i
+                ></a>
               </div>
-              <h3>graphic design</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod.
-              </p>
+              <h3>Shell Scripting</h3>
             </div>
           </div>
           <!-- service item end -->
@@ -665,44 +667,21 @@
           <!-- service item start -->
           <div class="service-item">
             <div class="service-item-inner outer-shadow">
-              <div class="icon inner-shadow">
-                <i class="fas fa-code"></i>
+              <div class="icon inner-shadow" style="width: 75px; height: 65px">
+                <a
+                  style="pointer-events: none"
+                  class="outer-shadow hover-in-shadow"
+                  ><i>
+                    <div>
+                      <img
+                        src="img\version_control.png"
+                        alt="Version Control Image"
+                        style="height: 6vh; width: auto"
+                      />
+                    </div> </i
+                ></a>
               </div>
-              <h3>Clean code</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod.
-              </p>
-            </div>
-          </div>
-          <!-- service item end -->
-
-          <!-- service item start -->
-          <div class="service-item">
-            <div class="service-item-inner outer-shadow">
-              <div class="icon inner-shadow">
-                <i class="fas fa-mobile"></i>
-              </div>
-              <h3>app develop</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod.
-              </p>
-            </div>
-          </div>
-          <!-- service item end -->
-
-          <!-- service item start -->
-          <div class="service-item">
-            <div class="service-item-inner outer-shadow">
-              <div class="icon inner-shadow">
-                <i class="fas fa-bullhorn"></i>
-              </div>
-              <h3>great support</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod.
-              </p>
+              <h3>Version Control</h3>
             </div>
           </div>
           <!-- service item end -->
@@ -754,7 +733,7 @@
                 />
 
                 <!-- view project btn -->
-                <span class="view-project">view project</span>
+                <!-- <span class="view-project">view project</span> -->
               </div>
               <p class="portfolio-item-title">personal portfolio</p>
 
@@ -1344,9 +1323,7 @@
     </div>
     <!-- style switcher end -->
 
-    <!-- main js -->
     <script src="js/main.js"></script>
-    <!-- style switcher js -->
     <script src="js/style-switcher.js"></script>
   </body>
 </html>

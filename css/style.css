@@ -980,6 +980,17 @@ img {
   line-height: 26px;
 }
 
+.service-section .service-item-inner {
+  padding: 30px 15px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.service-section .service-item-inner .icon {
+  margin: 0 auto 20px;
+}
+
 /* portfolio */
 
 .portfolio-section {
