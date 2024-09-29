@@ -16,19 +16,17 @@
         navMenu.classList.remove("open");
         fadeOutEffect();
         bodyScrollingToggle();
-
     }
 
     function fadeOutEffect() {
         document.querySelector(".fade-out-effect").classList.add("active");
         setTimeout(() => {
             document.querySelector(".fade-out-effect").classList.remove("active");
-
-        }, 300)
+        }, 300);
     }
     // attach and event handler to document
     document.addEventListener("click", (event) => {
-        if (event.target.classList.contains('link-item')) {
+        if (event.target.classList.contains("link-item")) {
             /*make sure event,target.hash a value before overridding default behavor */
             if (event.target.hash !== "") {
                 // prevent default behaviour anchor click behaviour
@@ -41,10 +39,13 @@
                 document.querySelector(hash).classList.add("active");
                 document.querySelector(hash).classList.remove("hide");
                 // deactivate existing active navigation menu 'link-item'
-                navMenu.querySelector(".active").classList.add("outer-shadow", "hover-in-shadow");
-                navMenu.querySelector(".active").classList.remove("active", "inner-shadow");
+                navMenu
+                    .querySelector(".active")
+                    .classList.add("outer-shadow", "hover-in-shadow");
+                navMenu
+                    .querySelector(".active")
+                    .classList.remove("active", "inner-shadow");
                 if (navMenu.classList.contains("open")) {
-
                     // activate new navigation menu 'link-item'
                     event.target.classList.add("active", "inner-shadow");
                     event.target.classList.remove("outer-shadow", "hover-in-shadow");
@@ -58,36 +59,42 @@
                             item.classList.add("active", "inner-shadow");
                             item.classList.remove("outer-shadow", "hover-in-shadow");
                         }
-                    })
+                    });
                     fadeOutEffect();
                 }
                 // add hash (#) to url
                 window.location.hash = hash;
             }
         }
-    })
+    });
 })();
 
 /* -about section tabs- */
 (() => {
     const aboutSection = document.querySelector(".about-section"),
-        tabsContainer = document.querySelector(".about-tabs")
+        tabsContainer = document.querySelector(".about-tabs");
 
     tabsContainer.addEventListener("click", (event) => {
         /* if event.target contains 'tab-item' class and not contains 'active' class */
-        if (event.target.classList.contains("tab-item") &&
-            !event.target.classList.contains("active")) {
+        if (
+            event.target.classList.contains("tab-item") &&
+            !event.target.classList.contains("active")
+        ) {
             const target = event.target.getAttribute("data-target");
             // deactivate existing active 'tab-item'
-            tabsContainer.querySelector(".active").classList.remove("outer-shadow", "active");
+            tabsContainer
+                .querySelector(".active")
+                .classList.remove("outer-shadow", "active");
             // activate new 'tab-item'
             event.target.classList.add("active", "outer-shadow");
             // deactivate existing active 'tab-content'
-            aboutSection.querySelector(".tab-content.active").classList.remove("active");
+            aboutSection
+                .querySelector(".tab-content.active")
+                .classList.remove("active");
             // activate new 'tab-content'
             aboutSection.querySelector(target).classList.add("active");
         }
-    })
+    });
 })();
 
 function bodyScrollingToggle() {
@@ -111,34 +118,42 @@ function bodyScrollingToggle() {
     /* filter portfolio items */
     filterContainer.addEventListener("click", (event) => {
         /* if event.target contains 'filter-item' class and not contains 'active' class */
-        if (event.target.classList.contains("filter-item") &&
-            !event.target.classList.contains("active")) {
+        if (
+            event.target.classList.contains("filter-item") &&
+            !event.target.classList.contains("active")
+        ) {
             // const target = event.target.getAttribute("data-target");
             // deactivate existing active 'filter-item'
-            filterContainer.querySelector(".active").classList.remove("outer-shadow", "active");
+            filterContainer
+                .querySelector(".active")
+                .classList.remove("outer-shadow", "active");
             // activate new 'filter-item'
             event.target.classList.add("active", "outer-shadow");
             const target = event.target.getAttribute("data-target");
             portfolioItems.forEach((item) => {
-                if (target === item.getAttribute("data-category") || target === 'all') {
+                if (target === item.getAttribute("data-category") || target === "all") {
                     item.classList.remove("hide");
                     item.classList.add("show");
                 } else {
                     item.classList.remove("show");
                     item.classList.add("hide");
                 }
-
-            })
-
+            });
         }
-    })
+    });
 
     portfolioItemsContainer.addEventListener("click", (event) => {
         if (event.target.closest(".portfolio-item-inner")) {
-            const portfolioItem = event.target.closest(".portfolio-item-inner").parentElement;
+            const portfolioItem = event.target.closest(
+                ".portfolio-item-inner"
+            ).parentElement;
             //get the portfolioItem index
-            itemIndex = Array.from(portfolioItem.parentElement.children).indexOf(portfolioItem);
-            screenshots = portfolioItems[itemIndex].querySelector(".portfolio-item-img img").getAttribute("data-screenshots");
+            itemIndex = Array.from(portfolioItem.parentElement.children).indexOf(
+                portfolioItem
+            );
+            screenshots = portfolioItems[itemIndex]
+                .querySelector(".portfolio-item-img img")
+                .getAttribute("data-screenshots");
             // convert screenshots into array
             screenshots = screenshots.split(",");
             if (screenshots.length === 1) {
@@ -153,14 +168,13 @@ function bodyScrollingToggle() {
             popupSlideshow();
             popupDetails();
         }
-    })
+    });
     closeBtn.addEventListener("click", () => {
         popupToggle();
         if (projectDetailsContainer.classList.contains("active")) {
             popupDetailsToggle();
         }
-
-    })
+    });
 
     function popupToggle() {
         popup.classList.toggle("open");
@@ -176,20 +190,20 @@ function bodyScrollingToggle() {
         popupImg.onload = () => {
             // deactivate loader after the popupImg loaded
             popup.querySelector(".pp-loader").classList.remove("active");
-
-        }
-        popup.querySelector(".pp-counter").innerHTML = (slideIndex + 1) + "of" + screenshots.length;
+        };
+        popup.querySelector(".pp-counter").innerHTML =
+            slideIndex + 1 + "of" + screenshots.length;
     }
     // next slide
     nextBtn.addEventListener("click", () => {
-            if (slideIndex === screenshots.length - 1) {
-                slideIndex = 0;
-            } else {
-                slideIndex++;
-            }
-            popupSlideshow();
-        })
-        // prev slide
+        if (slideIndex === screenshots.length - 1) {
+            slideIndex = 0;
+        } else {
+            slideIndex++;
+        }
+        popupSlideshow();
+    });
+    // prev slide
     prevBtn.addEventListener("click", () => {
         if (slideIndex === 0) {
             slideIndex = screenshots.length - 1;
@@ -197,7 +211,7 @@ function bodyScrollingToggle() {
             slideIndex--;
         }
         popupSlideshow();
-    })
+    });
 
     function popupDetails() {
         // if portfolio-item-details not exists
@@ -208,24 +222,28 @@ function bodyScrollingToggle() {
         projectDetailsBtn.style.display = "block";
 
         // get the project details
-        const details = portfolioItems[itemIndex].querySelector(".portfolio-item-details").innerHTML;
+        const details = portfolioItems[itemIndex].querySelector(
+            ".portfolio-item-details"
+        ).innerHTML;
         // set the project details
         popup.querySelector(".pp-project-details").innerHTML = details;
         // get the project title
-        const title = portfolioItems[itemIndex].querySelector(".portfolio-item-title").innerHTML;
+        const title = portfolioItems[itemIndex].querySelector(
+            ".portfolio-item-title"
+        ).innerHTML;
         // set the project title
         popup.querySelector(".pp-title h2").innerHTML = title;
         // get the project category
         const category = portfolioItems[itemIndex].getAttribute("data-category");
         // set the project category
-        popup.querySelector(".pp-project-category").innerHTML = category.split("-").join(" ");
+        popup.querySelector(".pp-project-category").innerHTML = category
+            .split("-")
+            .join(" ");
     }
 
     projectDetailsBtn.addEventListener("click", () => {
         popupDetailsToggle();
-    })
-
-
+    });
 
     function popupDetailsToggle() {
         if (projectDetailsContainer.classList.contains("active")) {
@@ -233,12 +251,12 @@ function bodyScrollingToggle() {
             projectDetailsBtn.querySelector("i").classList.add("fa-plus");
             projectDetailsContainer.classList.remove("active");
             projectDetailsContainer.style.maxHeight = 0 + "px";
-
         } else {
             projectDetailsBtn.querySelector("i").classList.remove("fa-plus");
             projectDetailsBtn.querySelector("i").classList.add("fa-minus");
             projectDetailsContainer.classList.add("active");
-            projectDetailsContainer.style.maxHeight = projectDetailsContainer.scrollHeight + "px";
+            projectDetailsContainer.style.maxHeight =
+                projectDetailsContainer.scrollHeight + "px";
             popup.scrollTo(0, projectDetailsContainer.offsetTop);
         }
     }
@@ -251,9 +269,8 @@ function bodyScrollingToggle() {
         if (!section.classList.contains("active")) {
             section.classList.add("hide");
         }
-    })
+    });
 })();
-
 
 window.addEventListener("load", () => {
     // preloader
@@ -261,4 +278,4 @@ window.addEventListener("load", () => {
     setTimeout(() => {
         document.querySelector(".preloader").style.display = "none";
     }, 600);
-})
+});
