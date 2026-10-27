@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": ">=24"
+  },
   "dependencies": {
     "@vercel/speed-insights": "^1.0.12"
   }
